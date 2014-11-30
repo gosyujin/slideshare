@@ -143,11 +143,11 @@ Ansibleのというよりは、構成管理ツール全般の長所か
 
 ## 登場人物
 
-- ホスト
+1. ホスト
     - Ansible を実行するマシン
     - Python 2.6 -
         - Python 3 未対応
-- サーバ
+1. サーバ
     - Ansible で環境を整えるマシン
     - Python 2.4 -
 
@@ -190,11 +190,11 @@ db01.example.com
 
 ---
 
-## playbookファイル TARGETセクション
+## playbookファイル 1 TARGETセクション
 
 どこにだれがインストールするか
 
-```yaml
+```haml
 - hosts: all           # すべてのホストに
   sudo: yes            # sudo使う
   remote_user: vagrant # vagrantユーザでログイン
@@ -202,26 +202,32 @@ db01.example.com
 
 ---
 
-## playbookファイル VARSセクション
+## playbookファイル 2 VARSセクション
 
 変数を指定する。TASKセクションで使用する
 
-```yaml
+```haml
   vars:
     username: newuser
 ```
 
 ---
 
-## playbookファイル TASKセクション
+## playbookファイル 3 TASKセクション
 
-どんなことをするのかモジュールを使って記述する。VARSで宣言した変数も使える
+どんなことをするのかモジュールを使って記述する
 
-```yaml
+```haml
   tasks:
     - name: ユーザを追加するよ # taskの名前、必須ではない
       user: name={{ username }} group=vagrant shell=/bin/bash # モジュール
 ```
+
+VARSで宣言した変数も使える
+
+---
+
+## playbookファイル 3 TASKセクション
 
 - userモジュールを使って以下のユーザを追加している
     - ユーザ名は newuser (VARSの変数から)
@@ -233,7 +239,7 @@ db01.example.com
 
 demo.playbook
 
-```yaml
+```haml
 - hosts: all
   sudo: yes
   remote_user: vagrant
