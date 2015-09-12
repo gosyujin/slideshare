@@ -11,6 +11,8 @@ slidenumbers: true
 
 - Twitter: @kk_Ataka 
 - GitHub:  gosyujin
+- 割と大きめのSIer勤務
+- 現在休職中。。。
 
 ![75%, right](https://pbs.twimg.com/profile_images/2222065431/image.png)
 
