@@ -3,7 +3,7 @@ slidenumbers: true
 
 # SIerでもAnsibleを<br />導入したい！
 
-## 2015/09/14<br />Ansible Meetup in Tokyo 2015.09
+## 2015/09/14<br />Ansible Meetup in Tokyo
 
 ---
 
