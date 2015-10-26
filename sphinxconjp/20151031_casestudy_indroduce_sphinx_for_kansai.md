@@ -3,7 +3,7 @@ slidenumbers: true
 autoscale: true
 build-lists: true
   
-# Sphinx導入事例<br />〜SIerの場合〜
+# Sphinx事例紹介<br />〜SIerの場合〜
 
 ## 2015/10/31<br />JUS Sphinxワークショップ＠関西
 
@@ -22,16 +22,16 @@ build-lists: true
 
 # アジェンダ
 
-1. Sphinxを導入する前
+1. Sphinx導入前
     - 導入のための政治活動
 1. Sphinx導入中、導入した後
     - 導入するにあたっての壁
     - 「納品」するには
-1. Sphinxの導入事例
+1. Sphinx導入事例と課題
 
 ---
 
-# Sphinxを導入する前
+# Sphinx導入前
 
 ---
 
@@ -90,7 +90,7 @@ build-lists: true
     - 連結、結合たくさんあるマトリクスのようなものとか
     - **Excel方眼紙フォーマット** で自由自在(泣)
 - 値の計算が簡単
-    - これはExcelの独壇場、さすがは表計算ソフト
+    - これは表計算ソフトExcelの独壇場
     - 表計算の用途にExcelを使うのは賛成
 
 ---
@@ -152,7 +152,7 @@ Officeで短所として挙げた問題は解消できている！…と思う
 "ミリ単位のレイアウト修正"
 ```
 
-- 出力先(html+css、pdfなど)である程度統一できる
+- 出力先(html+cssなど)である程度統一できる
 
 ---
 
@@ -177,8 +177,9 @@ Officeでは特に意識していなかったことを考慮する必要あり
 - しっかり作らないと情報が散らかる
     - いわゆるTips集になってしまう
 - 方言が多い(特にMarkdown)
+    - PHP Markdown Extra, GitHub Flavored Markdown etc
     - パーサが異なると出力結果が変わってしまう
-    - 逆に考えると長所になり得る
+        - 逆に考えると表現方法が増えるため長所になり得る
 - 出力はhtmlを想定しているものが多い
 
 ---
@@ -202,6 +203,8 @@ Officeでは特に意識していなかったことを考慮する必要あり
         - Wikiとかでこれを整備するのはちょっとしんどい…Office(Word)はちょっと得意かも
     - 実際に作ってみないと実感がわきづらいと思う
 
+![100% right](images/sphinx-project.png)
+
 ---
 
 # Sphinxだけの長所
@@ -213,18 +216,34 @@ Officeでは特に意識していなかったことを考慮する必要あり
 
 ---
 
-# Sphinx導入中<br />導入した後
+# 索引ページ
+
+- こんな感じ
+
+![100% right fit](images/index.png)
+
+---
+
+# 用語集ページ
+
+- こんな感じ
+
+![100% right fit](images/term.png)
+
+---
+
+# Sphinx導入中<br />と<br />導入した後
 
 ---
 
 # 導入するにあたっての壁
 
-大きく2つ
+---
 
-1. 対プロジェクトメンバー(PM)に対して(布教)
-2. 対顧客に対して(納品)
+1. 対、プロジェクトのメンバー(PM)に対して(布教)
+2. 対、顧客に対して(納品)
 
-![inline](https://cloud.githubusercontent.com/assets/588166/3563656/ac52d408-0a48-11e4-9013-aac931c21e40.png)
+![inline](images/constitution1.png)
 
 ---
 
@@ -238,6 +257,8 @@ Officeでは特に意識していなかったことを考慮する必要あり
   - Sphinxを導入したい人、基本的になんでもやる
 1. メンバー
   - 導入したSphinxを使ってほしい人
+
+![100% right](images/constitution2.png)
 
 ---
 
@@ -303,9 +324,12 @@ Officeでは特に意識していなかったことを考慮する必要あり
 1. プロジェクト
     - Sphinxでドキュメント納品する側
 1. 顧客
-    - ドキュメントを納品される側(社内の人 or 社外の人)
+    - ドキュメントを納品される側
+        - 社内の人 or 社外の人
     - 歴史的経緯からOfficeで納品される事が多い
         - 例外はJavadocとか？
+
+![100% right](images/constitution3.png)
 
 ---
 
@@ -336,11 +360,15 @@ Officeでは特に意識していなかったことを考慮する必要あり
 
 ---
 
-![inline](https://cloud.githubusercontent.com/assets/588166/3563987/1ac73444-0a65-11e4-929f-f5915950ba94.png)
+![fit](images/flowchart.png)
 
 ---
 
-# 導入事例
+# 自分たちで保守できないと厳しい…
+
+---
+
+# Sphinx導入事例と課題
 
 ---
 
@@ -349,12 +377,12 @@ Officeでは特に意識していなかったことを考慮する必要あり
 - 3ヶ月位のプロジェクトでSphinxを適用
     - ほぼ1人で設計、製造、テストを担当
         - 途中で1人サポートに入ってもらった
-    - 環境は Sphinx + Git(VCS) + Jenkins(Build)
+    - ドキュメント作成環境は Sphinx + Git(VCS) + Jenkins(Build)
     - ターゲットは「社内資料」(顧客へ納品しない)
 
 ---
 
-# 結果
+# 導入した感想
 
 1. Gitでバージョン管理、テキストなので差分管理も簡単！
 1. 内容に集中できる！
@@ -364,7 +392,7 @@ Officeでは特に意識していなかったことを考慮する必要あり
 
 ---
 
-# SIerにおけるSphinx導入の課題
+# Sphinx導入の課題
 
 1. 「Sphinxで書いていく！」空気を作るのが難しい
     - reSTで文章を書いてもらうのも難しい
